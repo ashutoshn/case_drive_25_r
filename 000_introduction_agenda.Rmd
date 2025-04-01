@@ -1,0 +1,50 @@
+---
+title: "Introduction and Agenda"
+author: "Ashutosh Nandeshwar"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+[Ashutosh Nandeshwar](https://nandeshwar.info) is a data science executive with over 18 years of experience in spearheading technical product solutions in AI, machine learning, and data visualization. He currently leads the data science practice at [CCS Fundraising](https://www.ccsfundraising.com).
+
+Previously, Ashutosh has built high-performing teams at top institutions like the **University of Southern California**, *University of Michigan*, and California Institute of Technology, significantly enhancing data-driven decision-making and revenue generation. With a Ph.D. specializing in machine learning, Ashutosh is a recognized thought leader, known for transforming complex data insights into strategic business outcomes with clarity and engaging storytelling.
+
+## Books
+
+Ashutosh is the author of three books:
+
+[![Soar](intro_images/soar_book.jpg)](https://www.amazon.com/Soar-Become-Extraordinary-Successful-Career-ebook/dp/B09ZKF8P61) [![Data Science for Fundraising](intro_images/dsfr_book.jpg)](https://ds4fr.nandeshwar.info/)![Tableau](intro_images/tableau_book.jpg)
+
+## Agenda
+
+-   Basic Introduction to Rmarkdown
+-   Rmarkdown Document
+-   Simple Analysis
+-   Parameterized Analysis
+-   `targets` package
+-   Advanced PowerPoint with `officer`
+-   GenAI integration
+
+Github repo: https://github.com/ashutoshn/case_drive_25_r
+
+## What we will not cover
+
+| R syntax and programming | Data manipulation and analysis | Quarto | LaTex Typesetting |
+|------|------|------|------|
+|      |      |      |      |
+
+
+## R Code
+
+```{r linkedinqr, fig.cap="My LinkedIn QR Code"}
+plot(qrcode::qr_code("https://www.linkedin.com/in/ashutoshnandeshwar/"))
+```
+
+
+
