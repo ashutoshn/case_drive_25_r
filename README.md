@@ -17,3 +17,9 @@ This project demonstrates how to build a reproducible data analysis and reportin
 - case_drive_25_r.Rproj # RStudio project file 
 - target_functions.R # Custom functions used in targets 
 - titanic_short.csv # Shortened version for quick testing
+
+## Resources
+- `officer` https://ardata-fr.github.io/officeverse/
+- `rmarkdown` https://bookdown.org/yihui/rmarkdown/
+- advanced markdown https://bookdown.org/yihui/bookdown/
+- Data Science for Fundraising https://ds4fr.nandeshwar.info/
