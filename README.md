@@ -21,5 +21,7 @@ This project demonstrates how to build a reproducible data analysis and reportin
 ## Resources
 - `officer` https://ardata-fr.github.io/officeverse/
 - `rmarkdown` https://bookdown.org/yihui/rmarkdown/
-- advanced markdown https://bookdown.org/yihui/bookdown/
+- Advanced markdown https://bookdown.org/yihui/bookdown/
 - Data Science for Fundraising https://ds4fr.nandeshwar.info/
+- Interacting with LLMs with `ellmer` https://ellmer.tidyverse.org/articles/ellmer.html
+- Chatbot building with `Shiny` https://posit-dev.github.io/shinychat/
