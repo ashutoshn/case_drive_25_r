@@ -1,0 +1,78 @@
+---
+title: "Parameterized Analysis"
+author: "Ashutosh Nandeshwar"
+date: "`r Sys.Date()`"
+output: html_document
+params:
+  inp_species: "Adelie"
+---
+
+```{r setup, include=FALSE}
+#knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+#knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, cache = TRUE)
+```
+
+## Load Libraries and Data
+We will use sample data from the `palmerpenguins` package. The data contains information about penguins.
+
+```{r loadlibs}
+library(palmerpenguins)
+library(tidyverse)
+library(summarytools)
+library(viridis)
+library(ggthemes)
+library(gt)
+library(gtsummary)
+```
+
+## Filter Data for a Species
+Let's filter the data for a **`r params$inp_species`** species.
+
+Top 5 rows of the filtered data:
+
+```{r filterdata}
+penguins_filtered <- penguins %>% 
+  filter(species == params$inp_species)
+
+head(penguins_filtered) %>% gt
+```
+
+## Linear regression model
+Let's build a linear regression model to predict body mass based on flipper length,  bill length and bill depth.
+
+```{r linregmodel}
+model_1 <- lm(body_mass_g ~ flipper_length_mm + bill_depth_mm +  bill_length_mm, penguins_filtered)
+
+summary(model_1)
+
+tbl_regression(model_1)
+```
+
+<!-- ## Models for every island -->
+<!-- Let's build a linear regression model for each island. -->
+
+<!-- ```{r linregmodelisland, results='asis'} -->
+
+<!-- for (this_island in unique(penguins_filtered$island)) { -->
+<!--   cat(paste0("### Island: ", this_island, "\n")) -->
+<!--   penguins_filtered_island <- penguins_filtered %>%  -->
+<!--     filter(island == this_island) -->
+
+<!--   this_model <- lm(body_mass_g ~ flipper_length_mm + bill_depth_mm +  bill_length_mm, penguins_filtered_island) -->
+
+<!--   print(tbl_regression(this_model)) -->
+
+<!--   cat("\n\n") -->
+<!-- } -->
+<!-- ``` -->
+
+
+<!-- do not uncomment here. Rmarkdown won't knit. run all species -->
+<!-- for (sp in unique(penguins$species)) {
+  render(
+    input = "03_parameterized_analysis.Rmd",
+    output_file = paste0(sp, "_analysis.html"),
+    params = list(inp_species = sp)
+  )
+} -->

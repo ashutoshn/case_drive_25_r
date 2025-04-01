@@ -1,0 +1,69 @@
+---
+title: "Simple Analysis"
+author: "Ashutosh Nandeshwar"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE),
+#knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, cache = TRUE)
+```
+
+## Load Libraries and Data
+We will use sample data from the `palmerpenguins` package. The data contains information about penguins.
+
+```{r loadlibs}
+library(palmerpenguins)
+library(tidyverse)
+library(summarytools)
+library(viridis)
+library(ggthemes)
+```
+
+```{r loaddata}
+data(penguins)
+```
+
+## Data Summary
+Let's take a look at the data.
+
+```{r summary}
+summary(penguins)
+```
+
+<!-- Let's make the summary look nice: -->
+<!-- ```{r betterlookingsmry} -->
+<!-- print(dfSummary(penguins,  -->
+<!--                 varnumbers   = FALSE,  -->
+<!--                 valid.col    = FALSE,  -->
+<!--                 graph.magnif = 0.75), -->
+<!--       method = "render") -->
+
+<!-- ``` -->
+
+<!-- ## Data Exploration -->
+
+<!-- Let's explore the relationship between bill length and depth. -->
+
+<!-- ```{r billlengthdepthplt} -->
+
+<!-- ggplot( -->
+<!--   data = penguins, -->
+<!--   aes(x = flipper_length_mm, y = bill_length_mm, color = species) -->
+<!-- ) + -->
+<!--   geom_point(size = 2) + -->
+<!--   scale_color_viridis(discrete = TRUE, option = 'D') + -->
+<!--   theme_tufte() + -->
+<!--   labs( -->
+<!--     title = 'Flipper length vs. bill length', -->
+<!--     subtitle = 'We can notice the positive correlation between bill length and depth', -->
+<!--     caption = 'Data source: palmerpenguins library' -->
+<!--   ) + -->
+<!--   theme(legend.position = 'bottom',  -->
+
+<!--         plot.title.position = "plot")  -->
+
+<!-- ``` -->
+
